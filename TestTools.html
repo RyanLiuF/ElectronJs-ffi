@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>SZZT ZT661 Scan Test Tools</title>
+    <!-- Bootstrap -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  </head>
+  <script src="ZTCLog.js"></script>
+  <script>
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+    require('./node_modules/bootstrap/dist/js/bootstrap.min.js');
+    testClick = function(){
+      userZTCLog();
+    }
+  </script>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="TestTools.html">TestTools</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Document.html">Document</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div style="margin-left: 20px;margin-top: 20px">
+            <button class="btn btn-info" type="button" onclick="testClick();" style="width: 10%">Open Device</button>
+            <h5 style="display: inline;margin-left: 10px;">Port:</h5>
+            <select style="width: 10%" id="com">
+                    <option value ="COM1">COM1</option>
+                    <option value ="COM2">COM2</option>
+                    <option value ="COM3">COM3</option>
+                    <option value ="COM4">COM4</option>
+            </select>
+            <h5 style="display: inline;margin-left: 10px">BaudRate:</h5>
+            <select style="width: 10%" id="baudrate">
+                    <option value ="9600">9600</option>
+                    <option value ="19200">19200</option>
+                    <option value ="38400">38400</option>
+                    <option value ="57600">57600</option>
+                    <option value ="115200">115200</option>
+            </select>
+            <br>
+            <button class="btn btn-info" type="button" onclick="testClick();" style="margin-top: 20px;width: 10%">Start Scan</button>
+            <button class="btn btn-info" type="button" onclick="testClick();" style="margin-top: 20px;width: 10%;margin-left: 20px">Stop Scan</button>
+            <br>
+            <button class="btn btn-info" type="button" onclick="testClick();" style="margin-top: 20px;width: 10%">Echo</button>
+            <br>
+            <button class="btn btn-info" type="button" onclick="testClick();" style="width: 10%;margin-top: 20px;">Close Device</button>
+        </div>
+  </body>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+</html>
